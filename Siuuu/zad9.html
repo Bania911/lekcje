@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const a = parseInt(prompt('podaj 1 liczbę'));
+         const b = parseInt(prompt('podaj 2 liczbę'));
+         const c = parseInt(prompt('podaj 3 liczbę'));
+         if (a>b&&a>c&&b>c)
+         {
+            document.write(a,b,c)
+         }
+       else if (a<b&&a>c&&b>c)
+         {
+            document.write(b,a,c)
+         }
+         else if(a>b&&a>c&&c>b)
+         {
+            document.write(a,c,b)
+         }
+         else if(a>b&&a<c&&c>b)
+         {
+            document.write(c,a,b)
+         }
+         else if(a<b&&a<c&&c>b)
+         {
+            document.write(c,b,a)
+         }
+         else
+         {
+         document.write(b,c,a)
+         }
+    </script>
+</body>
+</html>
