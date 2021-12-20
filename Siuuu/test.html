@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="wynik"></div>
+  <div class="suma"></div>
+  <div class="zera"></div>
+<script>
+  function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+const divWynik = document.querySelector('div.wynik');
+const divSuma = document.querySelector('div.suma');
+const divZera = document.querySelector('div.zera');
+ const liczby = [];
+ let suma=0;
+ let ileZer = 0;
+ for (let i = 0; i<100; i++)
+ {
+   liczby[i]= getRandomIntInclusive(0, 100);
+   suma+= liczby[i];
+ }
+ for (const liczba of liczby) 
+ {
+  if (liczba == 0) ileZer++;
+ }
+ divWynik.textContent = liczby.join(', ');
+ divSuma.textContent = 'Suma liczb tablicy wynosi ' + suma;
+ divZera.textContent='Liczba zer w tablicy: ' + ileZer;
+</script>
+</body>
+</html>
